@@ -28,7 +28,7 @@ img{
 .text-center{
     text-align: center;
 }
-. align-items-center{
+.align-items-center{
     align-items: center;
 }
 .justify-content-center{
@@ -116,4 +116,7 @@ footer{
     background: #D9D9D9;
     padding-top: 28px;
     padding-bottom: 28px;
+}
+#footer-container{
+    height: 100%;
 }
