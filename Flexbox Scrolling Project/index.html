@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layouts Mastery in CSS</title>
     <link rel="stylesheet" href="assets/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+    </style>
 </head>
+
 <body>
     <!-- Have a list of cards in html. Arrange the cards in a flexbox where after 3 cards they wrap to the next row.
 
@@ -14,18 +19,53 @@
     Use flexboxes at the top level to arrange a header, body, and footer. Have the header and footer be a specific height and have the body grow to fill the remainder of the page. The body will never push the footer out of view. When the content inside the body is too large, have the body be scrollable (again, without pushing the footer out of view).
     -->
     <header>
-        This is the header
+        <div class="container">
+            <div class="logo-and-sub-title text-center">
+                <img src="assets/img/Explore Nepal Logo.png" alt="Explore Nepal Logo">
+                <p>Your guide to travel and enjoy the beautiful Himalayan country...</p>
+            </div>
+        </div>
     </header>
     <main>
-        <aside class="sidebar">
-
-        </aside>
-        <section class="main-content">
-    
-        </section>
+        <div class="container">
+            <div class="d-flex">
+                <aside class="sidebar">
+                    <div class="section-title">Important Links</div>
+                    <ul>
+                        <li><a href="#">Hotels in Nepal</a></li>
+                        <li><a href="#">Hotels in Nepal</a></li>
+                        <li><a href="#">Hotels in Nepal</a></li>
+                        <li><a href="#">Hotels in Nepal</a></li>
+                        <li><a href="#">Hotels in Nepal</a></li>
+                        <li><a href="#">Hotels in Nepal</a></li>
+                        <li><a href="#">Hotels in Nepal</a></li>
+                        <li><a href="#">Hotels in Nepal</a></li>
+                    </ul>
+                </aside>
+                <section class="main-content">
+                    <section class="hero">
+                        <h1>Things to Do in Nepal</h1>
+                    </section>
+                    <section class="cards-sections">
+                        <div class="d-flex">
+                            <div class="card">
+                                <a href="#">
+                                    <img src="" alt="">
+                                    <h3>Cultural Exploration</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
     </main>
     <footer>
-        
+        <div class="container d-flex  align-items-center justify-content-center">
+            <p>Copyright (C) 2025 - Explore Nepal | All Rights Reserve </p>
+        </div>
     </footer>
+
 </body>
+
 </html>
