@@ -4,7 +4,14 @@
     margin: 0;
 }
 
-:root {}
+:root {
+    --primary: #fff;
+    --secondary: #CAE9FF;
+    --alternate: #DCCCBB;
+    --gray-accent: #D9D9D9;
+    --black-overlay:#00000062;
+    --accent: #f8961e;
+}
 
 /* Importing Fonts */
 
@@ -76,14 +83,14 @@ main section.main-content {
 
 .section-title {
     padding: 17px 20px;
-    border-top: solid 12px #D9D9D9;
-    border-left: solid 12px #D9D9D9;
-    border-right: solid 12px #D9D9D9;
+    border-top: solid 12px var(--gray-accent);
+    border-left: solid 12px var(--gray-accent);
+    border-right: solid 12px  var(--gray-accent);
     font-weight: bold;
 }
 
 header {
-    border-bottom: 1px solid #F2ECEC;
+    border-bottom: 1px solid var(--gray-accent);
     padding-bottom: 1rem;
 }
 
@@ -98,13 +105,13 @@ header .logo-and-sub-title img {
 
 .sidebar ul li {
     list-style-type: none;
-    background: #CAE9FF;
-    border-bottom: 1px solid #DCCCBB;
+    background: var(--secondary);
+    border-bottom: 1px solid var(--alternate);
     transition: all 0.5s ease-in-out;
    &:hover{
-    background: #f8961e;
+    background: var(--accent);
     a{
-        color: #fff;
+        color: var(--primary);
     }
    }
 }
@@ -135,14 +142,14 @@ main .hero::after {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: #00000062;
+    background: var(--black-overlay);
     left: 0;
     top: 0;
 }
 
 main .hero h1 {
     font-size: 2.5rem;
-    color: #fff;
+    color:  var(--primary);;
     position: relative;
     z-index: 9;
 }
@@ -194,7 +201,7 @@ main .hero h1 {
                 content:"";
                 height: 100%;
                 width: 100%;
-                background: #0000003b;
+                background: var(--black-overlay);
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -239,13 +246,15 @@ main .hero h1 {
         .pricing-section{
             padding:1rem 0;
             button{
-                background: #f8961e;
+                background: var(--accent);
                 padding: 1rem;
                 border: unset;
                 border-radius: 30px;
-                color: #fff;
+                color:  var(--primary);;
+                transition: all 0.5s ease-in-out;
                 &:hover{
                     cursor: pointer;
+                    transform: translateX(2px) translateY(-2px);
                 }
              
             }
