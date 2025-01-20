@@ -25,6 +25,7 @@ img {
     margin: 0 auto;
 }
 
+
 .d-flex {
     display: flex;
 }
@@ -52,17 +53,17 @@ body {
 }
 
 header {
-    height: 20vh;
+    height: 200px;
 }
 
 main {
-    height: 70vh;
+    height: calc(100vh - 300px);
     padding-top: 1rem;
     overflow-y: scroll;
 }
 
 footer {
-    height: 10vh;
+    height: 100px;
 }
 
 main aside {
@@ -124,8 +125,9 @@ main .hero {
 
     background: url('img/Hero_Section_background.jpeg');
     background-size: cover;
-    padding-left: 5%;
-    padding-top: 30%;
+    display: flex;
+    padding: 1rem;
+    align-items: flex-end;
 }
 
 main .hero::after {
@@ -139,7 +141,7 @@ main .hero::after {
 }
 
 main .hero h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
     color: #fff;
     position: relative;
     z-index: 9;
@@ -266,4 +268,59 @@ footer {
 
 #footer-container {
     height: 100%;
+}
+
+/* Responsive */
+
+@media screen and ( max-width: 1440px) {
+    /* Adding padding for latpop screens so that the card is not stuck at the rightmost part */
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+}
+@media screen and ( max-width: 900px) {
+    /* Reducing font sizes to adjust the rem size according to screens */
+    html{
+        font-size: 14px;
+    }
+}
+@media screen and ( max-width: 600px) {
+    html{
+        font-size: 12px;
+    }
+}
+@media screen and ( max-width: 425px) {
+    /* Breaking the main content layout on mobile screens */
+    html{
+        font-size: 11px;
+    }
+    main > .container > .d-flex{
+        flex-wrap: wrap;
+    }
+    main > .container > .d-flex > *{
+        flex-basis: 100%;
+    }
+    main > .container > .d-flex > .sidebar{
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    .card .pricing-section{
+        flex-wrap: wrap;
+    }
+    .card .pricing-section > *{
+        flex-basis: 100%;
+        text-align: center;
+        margin-top: 1rem;
+        button{
+            width: 100%;
+            
+        }
+    }
+}
+@media screen and ( max-width: 375px) {
+    /* Making the cards only 1 per row on extra small screens */
+   .cards-sections .card{
+    flex-basis: 100%!important;
+   }
 }
