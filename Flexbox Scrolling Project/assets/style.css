@@ -99,8 +99,13 @@ header .logo-and-sub-title img {
     list-style-type: none;
     background: #CAE9FF;
     border-bottom: 1px solid #DCCCBB;
-    padding: 14px 12px;
-
+    transition: all 0.5s ease-in-out;
+   &:hover{
+    background: #f8961e;
+    a{
+        color: #fff;
+    }
+   }
 }
 
 .sidebar ul li a {
@@ -108,6 +113,9 @@ header .logo-and-sub-title img {
     color: #000;
     font-weight: 500;
     font-size: 1rem;
+    padding: 14px 12px;
+    display: block;
+    transition: all 0.5s ease-in-out;
 }
 
 main .hero {
