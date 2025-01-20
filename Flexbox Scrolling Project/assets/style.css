@@ -3,9 +3,10 @@
     padding: 0;
     margin: 0;
 }
+:root{
 
+}
 /* Importing Fonts */
-
 
 body{
     font-family: "Poppins", serif;
@@ -33,6 +34,9 @@ img{
 }
 .justify-content-center{
     justify-content: center;
+}
+.justify-content-between{
+    justify-content: space-between;
 }
 /* Homepage */
 /* Layout */
